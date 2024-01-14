@@ -22,9 +22,10 @@ while True:
         print(colored_banner)    
     print(Fore.BLUE + "1) 3 digit \n2) 4 digit \n3) 6 digit \n4) 8 digit")#bu satır işlemleri ekrana yazdırır.
     x = int(input("işlem seç: "))
+    dizin = "/root/bryte-f/"
     if x == 1:
         i = input("Dosya adı giriniz: ")#dosya adı alma
-        with open(i, "w") as dosya:#i değişkene girilen ad ile txt dosyayı kontrol ediyoruz
+        with open(f'{dizin}/{i}', "w") as dosya:#i değişkene girilen ad ile txt dosyayı kontrol ediyoruz
             for x in range(1000):#999 a kadar saydırıyoruz
                     dosya.write("{:03d}\n".format(x))#txt dosyasına 3 haneli olarak yazdırıyoruz
             if os.path.exists(i):#dosyanın olup olmadığına bakıyoruz
@@ -41,7 +42,7 @@ while True:
                         break
     elif x == 2:
         i = input("Dosya adı giriniz: ")
-        with open(i, "w") as dosya:
+        with open(f'{dizin}/{i}', "w") as dosya:
             for x in range(10000):
                 dosya.write("{:04d}\n".format(x))
             if os.path.exists(i):#dosyanın olup olmadığına bakıyoruz
@@ -58,7 +59,7 @@ while True:
                         break
     elif x == 3:
         i = input("Dosya adı giriniz: ")
-        with open(i, "w") as dosya:
+        with open(f'{dizin}/{i}', "w") as dosya:
            for x in range(1000000):
                 dosya.write("{:06d}\n".format(x))
         if os.path.exists(i):#dosyanın olup olmadığına bakıyoruz
@@ -75,7 +76,7 @@ while True:
                         break
     elif x == 4:
         i = input("Dosya adı giriniz: ")
-        with open(i, "w") as dosya:
+        with open(f'{dizin}/{i}', "w") as dosya:
             for x in range(100000000):
                dosya.write("{:08d}\n".format(x))
         if os.path.exists(i):#dosyanın olup olmadığına bakıyoruz
