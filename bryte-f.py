@@ -40,6 +40,15 @@ while True:
                      continue
                     else:#yoksa program bitiyo
                         break
+        else:
+            with open(f'{dizin}/{i}', "w") as dosya:#i değişkene girilen ad ile txt dosyayı kontrol ediyoruz
+                    for x in range(1000):#999 a kadar saydırıyoruz
+                        dosya.write("{:03d}\n".format(x))#txt dosyasına 3 haneli olarak yazdırıyoruz
+                    tekrar = str(input("başka bir işlem varmı Y/N: "))#başka bir işlem var mı diye soruyoruz
+                    if tekrar == "Y":#varsabaşa dönüyoruz
+                     continue
+                    else:#yoksa program bitiyo
+                        break
     elif x == 2:
         i = input("Dosya adı giriniz: ")
         with open(f'{dizin}/{i}', "w") as dosya:
