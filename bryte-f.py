@@ -25,19 +25,19 @@ while True:
     dizin = "/root/bryte-f/WordList"
     if x == 1:
         i = input("Dosya adı giriniz: ")#dosya adı alma
-        with open(f'{dizin}/{i}', "w") as dosya:#i değişkene girilen ad ile txt dosyayı kontrol ediyoruz
-            for x in range(1000):#999 a kadar saydırıyoruz
-                    dosya.write("{:03d}\n".format(x))#txt dosyasına 3 haneli olarak yazdırıyoruz
-            if os.path.exists(i):#dosyanın olup olmadığına bakıyoruz
-                print(f"'{i}' adlı dosya zaten var. Üzerine yazmak istiyor musunuz? (E/H)")#dosya var devam etmek istiyo musun?
-                user_choice = input().strip().lower()
-                if user_choice != 'e':#cevap e değilse işlemi iptal edip başa dönüyoruz
-                    print("İşlem iptal edildi.")
-                    continue
-                else:
+        if os.path.exists(f'{dizin}/{i}'):#dosyanın olup olmadığına bakıyoruz
+            print(f"'{i}' adlı dosya zaten var. Üzerine yazmak istiyor musunuz? (E/H)")#dosya var devam etmek istiyo musun?
+            user_choice = input().strip().lower()
+            if user_choice != 'e':#cevap e değilse işlemi iptal edip başa dönüyoruz
+                print("İşlem iptal edildi.")
+                continue
+            else:
+                with open(f'{dizin}/{i}', "w") as dosya:#i değişkene girilen ad ile txt dosyayı kontrol ediyoruz
+                    for x in range(1000):#999 a kadar saydırıyoruz
+                        dosya.write("{:03d}\n".format(x))#txt dosyasına 3 haneli olarak yazdırıyoruz
                     tekrar = str(input("başka bir işlem varmı Y/N: "))#başka bir işlem var mı diye soruyoruz
                     if tekrar == "Y":#varsabaşa dönüyoruz
-                        continue
+                     continue
                     else:#yoksa program bitiyo
                         break
     elif x == 2:
