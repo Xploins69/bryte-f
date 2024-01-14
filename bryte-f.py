@@ -21,7 +21,7 @@ while True:
         colored_banner = create_colored_banner(banner_text, font=font_choice, color=color_choice)
         print(colored_banner)    
     print(Fore.BLUE + "1) 3 digit \n2) 4 digit \n3) 6 digit \n4) 8 digit")#bu satır işlemleri ekrana yazdırır.
-    x = input("işlem seç: ")
+    x = int(input("işlem seç: "))
     if x == 1:
         i = input("Dosya adı giriniz: ")#dosya adı alma
         with open(i, "w") as dosya:#i değişkene girilen ad ile txt dosyayı kontrol ediyoruz
@@ -89,8 +89,7 @@ while True:
                     if tekrar == "Y":#varsabaşa dönüyoruz
                         continue
                     else:#yoksa program bitiyo
-                        break
-    #yanlış işlem                          
+                        break                        
     else:
         print(Fore.RED + "doğru işlem seç")
         c = input("çıkmak için ENTER basınız.")
