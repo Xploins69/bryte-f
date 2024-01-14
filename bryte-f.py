@@ -51,7 +51,7 @@ while True: #sonsuz bir döngü başlatılır
                         break
     elif x == 2: #işlem 2'se
         i = input("Dosya adı giriniz: ") #kullanıcıdan dosya adı alınıyor
-        if os.path.exists(i): #dosyanın olup olmadığına bakılır
+        if os.path.exists(f'{dizin}/{i}'): #dosyanın olup olmadığına bakılır
             print(f"'{i}' adlı dosya zaten var. Üzerine yazmak istiyor musunuz? (E/H)") #dosya var devam etmek istiyo musun?
             user_choice = input().strip().lower()
             if user_choice != 'e': #cevap e değilse işlemi iptal edip başa dönülür
@@ -77,7 +77,7 @@ while True: #sonsuz bir döngü başlatılır
                     break
     elif x == 3:
         i = input("Dosya adı giriniz: ")
-        if os.path.exists(i):#dosyanın olup olmadığına bakıyoruz
+        if os.path.exists(f'{dizin}/{i}'):#dosyanın olup olmadığına bakıyoruz
             print(f"'{i}' adlı dosya zaten var. Üzerine yazmak istiyor musunuz? (E/H)")#dosya var devam etmek istiyo musun?
             user_choice = input().strip().lower()
             if user_choice != 'e':#cevap e değilse işlemi iptal edip başa dönüyoruz
@@ -103,7 +103,7 @@ while True: #sonsuz bir döngü başlatılır
                     break
     elif x == 4:
         i = input("Dosya adı giriniz: ")
-        if os.path.exists(i):#dosyanın olup olmadığına bakıyoruz
+        if os.path.exists(f'{dizin}/{i}'):#dosyanın olup olmadığına bakıyoruz
             print(f"'{i}' adlı dosya zaten var. Üzerine yazmak istiyor musunuz? (E/H)")#dosya var devam etmek istiyo musun?
             user_choice = input().strip().lower()
             if user_choice != 'e':#cevap e değilse işlemi iptal edip başa dönüyoruz
