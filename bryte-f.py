@@ -22,7 +22,7 @@ while True:
         print(colored_banner)    
     print(Fore.BLUE + "1) 3 digit \n2) 4 digit \n3) 6 digit \n4) 8 digit")#bu satır işlemleri ekrana yazdırır.
     x = int(input("işlem seç: "))
-    dizin = "/root/bryte-f/"
+    dizin = "/root/bryte-f/wordlist"
     if x == 1:
         i = input("Dosya adı giriniz: ")#dosya adı alma
         with open(f'{dizin}/{i}', "w") as dosya:#i değişkene girilen ad ile txt dosyayı kontrol ediyoruz
