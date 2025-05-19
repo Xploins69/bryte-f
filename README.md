@@ -35,5 +35,3 @@
     <img src="https://img.shields.io/badge/colorOS-0.1-blue" />
 
     </a>
-
-</p>
